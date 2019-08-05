@@ -8,7 +8,6 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string :database
       t.string :technology
       t.string :framework
-      t.string :photo
 
       t.timestamps
     end

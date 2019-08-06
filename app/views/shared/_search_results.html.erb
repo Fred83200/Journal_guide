@@ -2,7 +2,7 @@
   <h4 id="results-back"><i class="fas fa-arrow-left" id="results-back"></i> Search Results</h4>
 <% end %>
 <% if @search_projects.size.positive? %>
-  <h4>Projects found (<%= @search_projects.size %>)</h4>
+  <h4>(<%= @search_projects.size %>) Projects found</h4>
   <hr style="color: grey">
   <div class="my-perm-index">
     <div class="index-cards">
@@ -11,12 +11,12 @@
           <div class="project-card">
             <div class="project-sections">
               <div class="card-top">
-                <p class="charcoal">Title: <%= project.name %></p>
+                <h1 class="charcoal"><strong> Title: </strong><%= project.name %></h1>
               </div>
             </div>
           </div>
           <% end %>
-              <h2 class="charcoal">Language(s): <%= project.languages %></h2>
+              <h5 class="charcoal">Language(s): <%= project.languages %></h5>
         <% end %>
     </div>
   </div>

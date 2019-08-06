@@ -32,8 +32,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project = Project.find(params[:id])
-    @cocktail.destroy
-    redirect_to projects_path(root_path)
+    @project.destroy
   end
 
   private

@@ -1,5 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-guide">
-  <%= link_to "Fred's Guide", root_path, class: "btn btn-primary nav-link" %>
-  <%= link_to "New Project", new_project_path, class: "btn btn-primary" %>
-  <%= link_to "All Projects", projects_path, class: "btn btn-primary" %>
+  <div class="lhs">
+    <%= link_to "Fred's Guide", root_path, class: "btn btn-primary nav-link" %>
+    <form class="form-search" method="get" id="s" action="/projects">
+      <div class="input-append">
+          <input type="text" class="input-medium search-query" name="s" placeholder="Search..." value="">
+          <button type="submit" class="btn btn-blue search-btn">Go</button>
+      </div>
+    </form>
+    <div class="navbar-link">
+      <%= link_to "New Project", new_project_path, class: "btn btn-primary" %>
+      <%= link_to "All Projects", projects_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>

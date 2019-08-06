@@ -1,17 +1,58 @@
 .navbar-guide {
   justify-content: space-between;
   background: white;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 65px;
 }
 
 .navbar-guide .navbar-collapse {
   flex-grow: 0;
 }
 
+.input-medium {
+  border-radius: 25px;
+  height: 40px;
+  border: 1px solid #0074d9;
+  padding-left: 15px;
+  padding-right: 60px;
+  position: relative;
+  outline: none;
+  &:hover {
+    outline: none;
+  }
+}
+
+.search-btn {
+  position: absolute;
+  top: 16px;
+  left: 280px;
+}
+
+.btn-blue {
+  height: 38spx;
+  background-color: #0074d9;
+  border-radius: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: center;
+  margin-left: 70px;
+  margin-right: 10px;
+  color: white;
+  top: 14px;
+}
+
 .nav-link {
   color: white;
   padding: 3px;
   width: fit-content;
-  &:hover {
+}
 
-  }
+.lhs {
+  display: flex;
+  align-items: center;
+  height:40px;
 }

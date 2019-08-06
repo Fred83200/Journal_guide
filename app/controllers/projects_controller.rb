@@ -3,6 +3,14 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    if params[:s].present?
+      PgSearch::Multisearch.rebuild(Project)
+      results = PgSearch.multisearch(params[:s])
+      @results = results.map { |result| result.searchable }
+      @search_projects = @results.select{ |r| r.respond_to? :name }
+    else
+      @search_projects = []
+    end
   end
 
   def show

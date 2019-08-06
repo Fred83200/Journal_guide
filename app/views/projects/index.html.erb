@@ -1,16 +1,19 @@
-<div class="container">
-  <div class="project">
-    <div class="project-cards">
-      <% @projects.each do |project| %>
-      <div class="card">
-        <%= link_to project_path(project), style: "width: 100%", class: "card-link" do %>
-        <div class="project-infos">
-          <h2><%= project.name.capitalize %></h2>
-          <h2><%= project.languages.capitalize %></h2>
+<% if params[:s] %>
+<%= render 'shared/search_results' %>
+<% end %>
+  <div class="container">
+    <div class="project">
+      <div class="project-cards">
+        <% @projects.each do |project| %>
+        <div class="card">
+          <%= link_to project_path(project), style: "width: 100%", class: "card-link" do %>
+          <div class="project-infos">
+            <h2><%= project.name.capitalize %></h2>
+            <h2><%= project.languages.capitalize %></h2>
+          </div>
+          <% end  %>
         </div>
-        <% end  %>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
-</div>

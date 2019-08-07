@@ -52,6 +52,12 @@
   background-color: white;
   border-color: white;
   margin-right: 42px;
+  &:hover {
+    background-color: #e9e5dd;
+    border-color: #e9e5dd;
+    transition: 1000ms;
+    color: black;
+  }
 }
 
 .navbar-link {

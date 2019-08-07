@@ -6,13 +6,13 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs" >
-      <%= f.input :name %>
-      <%= f.input :link %>
-      <%= f.input :languages %>
-      <%= f.input :description %>
-      <%= f.input :technology %>
-      <%= f.input :framework %>
-      <%= f.input :database %>
+      <%= f.input :name, placeholder: 'Title for your Project or Resources' %>
+      <%= f.input :link, placeholder: 'Add a link' %>
+      <%= f.input :languages, placeholder: 'Used language(s)' %>
+      <%= f.input :description, placeholder: 'Describe your resource' %>
+      <%= f.input :technology, placeholder: 'Technology used (AWS, Git, Web, Machine learning...)' %>
+      <%= f.input :framework, placeholder: '(Django, Flask, Springboot...)' %>
+      <%= f.input :database, placeholder: 'DataBase used: (Mysql, Postgresql, MangoDB...)' %>
       <%= f.input :photo %>
     </div>
 

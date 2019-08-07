@@ -1,10 +1,17 @@
-<h1>Review your Project | Resource</h1>
+<h1 class="title-show">Review your Project | Resource</h1>
 
-<h2>Title: <%= @project.name %></h4>
-<h4>URL / Link:</h4><a href="<%= @project.link %>" target="_blank"><%= @project.link %></a>
-<h4>Languages: <%= @project.languages %></h4>
-<h4>Description: <%= @project.description %></h4>
-<h4>Database: <%= @project.database %></h4>
-<h4>Framework: <%= @project.framework %></h4>
-<h4>Technology: <%= @project.technology %></h4>
-<h4>File: <%= @project.photo %></h4>
+<div class="container">
+  <div class="project">
+    <div class="project-card">
+      <h2 class= "project-name">Title: <%= @project.name %></h4>
+      <h4 class="project-url">URL / Link: <a href="<%= @project.link %>" target="_blank"> <%= @project.link %></a></h4>
+      <h4 class="project-infos">Languages: <%= @project.languages %></h4>
+      <h4 class="project-infos">Description: <%= @project.description %></h4>
+      <h4 class="project-infos">Database: <%= @project.database %></h4>
+      <h4 class="project-infos">Framework: <%= @project.framework %></h4>
+      <h4 class="project-infos">Technology: <%= @project.technology %></h4>
+      <h4 class="project-infos">File: <%= @project.photo %></h4>
+      <%= link_to "Back to all", projects_path, class: "btn btn-primary btn-back" %>
+    </div>
+  </div>
+</div>

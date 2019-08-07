@@ -1,11 +1,11 @@
 <div class="container col-5">
-  <h1 class="text-center my-3">Create a project</h1>
+  <h1 class="text-center my-3" style="color: black;">Create a project</h1>
 
   <%= simple_form_for(@project) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    <div class="form-inputs" >
+    <div class="form-inputs" style="color: black;" >
       <%= f.input :name, placeholder: 'Title for your Project or Resources' %>
       <%= f.input :link, placeholder: 'Add a link' %>
       <%= f.input :languages, placeholder: 'Used language(s)' %>

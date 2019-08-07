@@ -8,7 +8,7 @@
     <div class="index-cards">
       <% @search_projects.each do |project| %>
         <%= link_to project_path(project) do %>
-          <div class="project-card">
+          <div class="card">
             <div class="project-sections">
               <div class="card-top">
                 <h1 class="charcoal"><strong> Title: </strong><%= project.name %></h1>

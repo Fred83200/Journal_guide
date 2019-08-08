@@ -3,14 +3,38 @@
 <div class="container">
   <div class="project">
     <div class="project-card">
-      <h2 class= "project-name">Title: <%= @project.name %></h4>
-      <h4 class="project-url">URL / Link: <a href="<%= @project.link %>" target="_blank"> <%= @project.link %></a></h4>
-      <h4 class="project-infos">Languages: <%= @project.languages %></h4>
-      <h4 class="project-infos">Description: <%= @project.description %></h4>
-      <h4 class="project-infos">Database: <%= @project.database %></h4>
-      <h4 class="project-infos">Framework: <%= @project.framework %></h4>
-      <h4 class="project-infos">Technology: <%= @project.technology %></h4>
-      <h4 class="project-infos">File: <%= @project.photo %></h4>
+          <h2 class= "project-name">Title: <%= @project.name %></h4>
+      <% if @project.link.empty? %>
+        <h4 class="project-url">URL / Link: None Given</h4>
+      <% else %>
+        <h4 class="project-url">URL / Link: <a href="<%= @project.link %>" target="_blank"> <%= @project.link %></a></h4>
+      <% end %>
+      <% if @project.languages.empty? %>
+        <h4 class="project-infos">Languages: None Given</h4>
+      <% else %>
+        <h4 class="project-infos">Languages: <%= @project.languages %></h4>
+      <% end %>
+      <% if @project.description.empty? %>
+        <h4 class="project-infos">Description: None Given</h4>
+      <% else %>
+        <h4 class="project-infos">Description: <%= @project.description %></h4>
+      <% end %>
+      <% if @project.database.empty? %>
+        <h4 class="project-infos">Database: None Given</h4>
+      <% else %>
+        <h4 class="project-infos">Database: <%= @project.database %></h4>
+      <% end %>
+      <% if @project.framework.empty? %>
+        <h4 class="project-infos">Framework: None Given</h4>
+      <% else %>
+        <h4 class="project-infos">Framework: <%= @project.framework %></h4>
+      <% end %>
+      <% if @project.technology.empty? %>
+        <h4 class="project-infos">Technology: None Given</h4>
+      <% else %>
+        <h4 class="project-infos">Technology: <%= @project.technology %></h4>
+      <% end %>
+        <h4 class="project-infos">File: <%= @project.photo %></h4>
       <%= link_to "Back to all", projects_path, class: "btn btn-primary btn-back" %>
     </div>
   </div>

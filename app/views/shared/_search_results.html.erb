@@ -2,21 +2,21 @@
   <h4 id="results-back"><i class="fas fa-arrow-left" id="results-back"></i> Search Results</h4>
 <% end %>
 <% if @search_projects.size.positive? %>
-  <h4>(<%= @search_projects.size %>) Projects found</h4>
-  <hr style="color: grey">
-  <div class="my-perm-index">
+  <h4 style="color: black;">(<%= @search_projects.size %>) Projects found</h4>
+  <hr style="color: $gray">
+  <div class="my-project-index">
     <div class="index-cards">
       <% @search_projects.each do |project| %>
         <%= link_to project_path(project) do %>
-          <div class="card">
+          <div class="container search-card">
             <div class="project-sections">
               <div class="card-top">
                 <h1 class="charcoal"><strong> Title: </strong><%= project.name %></h1>
+              <h5 class="charcoal">Language(s): <%= project.languages %></h5>
               </div>
             </div>
           </div>
           <% end %>
-              <h5 class="charcoal">Language(s): <%= project.languages %></h5>
         <% end %>
     </div>
   </div>

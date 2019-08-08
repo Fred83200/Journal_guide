@@ -12,7 +12,7 @@
       <% if @project.languages.empty? %>
         <h4 class="project-infos">Languages: None Given</h4>
       <% else %>
-        <h4 class="project-infos">Languages: <%= link_to @project.languages, root_path %></h4>
+        <h4 class="project-infos">Languages: <%= link_to @project.languages, filters_path %></h4>
       <% end %>
       <% if @project.description.empty? %>
         <h4 class="project-infos">Description: None Given</h4>

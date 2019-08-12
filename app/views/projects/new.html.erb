@@ -13,6 +13,7 @@
       <%= f.input :technology, placeholder: 'Technology used (AWS, Git, Web, Machine learning...)' %>
       <%= f.input :framework, placeholder: '(Django, Flask, Springboot...)' %>
       <%= f.input :database, placeholder: 'DataBase used: (Mysql, Postgresql, MangoDB...)' %>
+      <%= f.input :tag_ids, as: :select, collection: Tag.order(:name), label_method: :name, input_html: {multiple: true} %>
       <%= f.input :photo %>
     </div>
 

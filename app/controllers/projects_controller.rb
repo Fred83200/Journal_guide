@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action only: :show
 
   def index
-    @projects = Project.all
+    params[:tag] ? @projects = Project.tagged_with(params[:tag]) : @projects = Project.all
     if params[:s].present?
       PgSearch::Multisearch.rebuild(Project)
       results = PgSearch.multisearch(params[:s])
@@ -40,6 +40,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :link, :languages, :description, :database, :technology, :framework, :photo)
+    params.require(:project).permit(:name, :link, :languages, :description, :database, :technology, :framework, :photo, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
   end
 end

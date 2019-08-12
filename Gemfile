@@ -18,6 +18,14 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'pg_search'
+gem 'popper_js', '~> 1.11.1'
+gem 'bootstrap', '4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+  # add the line below
+  gem 'rails-assets-chosen'
+end
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

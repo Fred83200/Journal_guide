@@ -14,13 +14,13 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <script>
-  $(document).on('ready page:load', function () {
-    $('#projects_tag_ids').chosen({
-      allow_single_deselect: true,
-      width: '100%'
-    })
-  });
-</script>
+        <script>
+      $(document).on('ready page:load', function () {
+        $('#project_tag_ids').chosen({
+          allow_single_deselect: true,
+          width: '100%'
+        })
+      });
+    </script>
   </body>
 </html>

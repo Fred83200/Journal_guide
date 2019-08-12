@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
     params[:tag] ? @projects = Project.tagged_with(params[:tag]) : @projects = Project.all
+
     if params[:s].present?
       PgSearch::Multisearch.rebuild(Project)
       results = PgSearch.multisearch(params[:s])

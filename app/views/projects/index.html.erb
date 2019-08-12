@@ -8,10 +8,9 @@
         <div class="card">
           <%= link_to project_path(project), style: "width: 100%", class: "card-link" do %>
           <div class="project-infos">
-            <h3>Project | Resource :</h3>
-            <hr>
             <h4><%= project.name.capitalize %></h4>
-            <p><small>Tags: <%= raw project.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small</p>
+            <hr>
+            <p class="project-infos">Link to all resources: <%= raw project.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></p>
           </div>
             <%= link_to project_path(project), method: :delete, class: "trash-logo", data: { confirm: "Are you sure you want to delete this Project ?"} do %>
             <i class="fas fa-trash"></i>

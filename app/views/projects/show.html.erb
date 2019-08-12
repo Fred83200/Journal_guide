@@ -5,15 +5,14 @@
     <div class="project-card">
           <h2 class= "project-name">Title: <%= @project.name.capitalize %></h4>
       <% if @project.link.empty? %>
-        <h4 class="project-url">URL / Link: None Given</h4>
+        <h4 class="project-url">URL / Link:</h4>
       <% else %>
         <h4 class="project-url">URL / Link: <a href="<%= @project.link %>" target="_blank"> <%= @project.link %></a></h4>
       <% end %>
       <% if @project.languages.empty? %>
         <h4 class="project-infos">Languages: None Given</h4>
       <% else %>
-<!--         <a href ="/search/Python" ><span class="badge badge-secondary">Python</span></a>
- -->        <h4 class="project-infos">Languages: <%= link_to @project.languages%></h4>
+        <h4 class="project-infos">Languages: <%= @project.languages%></h4>
       <% end %>
       <% if @project.description.empty? %>
         <h4 class="project-infos">Description: None Given</h4>
@@ -36,7 +35,7 @@
         <h4 class="project-infos">Technology: <%= @project.technology.capitalize %></h4>
       <% end %>
         <h4 class="project-infos">File: <%= @project.photo %></h4>
-      <h4 class="project-infos"><small>Link to all resources: <%= raw @project.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small</h4>
+      <h4 class="project-infos">Link to all resources: <%= raw @project.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></h4>
       <%= link_to "Back to all", projects_path, class: "btn btn-primary btn-back" %>
     </div>
   </div>
